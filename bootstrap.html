@@ -1,0 +1,1921 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap 5 Complete Cheat Sheet</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <style>
+      .component-container {
+        background-color: #f8f9fa;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 30px;
+        border-left: 4px solid #0d6efd;
+      }
+      pre {
+        position: relative;
+        background: #f5f5f5;
+        padding: 15px;
+        border-radius: 4px;
+        margin-top: 15px;
+      }
+      .copy-btn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+      }
+      .example-box {
+        padding: 15px;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+        margin-bottom: 15px;
+      }
+      h2 {
+        padding-bottom: 10px;
+        border-bottom: 2px solid #dee2e6;
+        margin-bottom: 20px;
+      }
+      h3 {
+        margin-top: 25px;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body class="p-4">
+    <div class="container">
+      <h1 class="text-center mb-5">Bootstrap 5 Complete Cheat Sheet</h1>
+
+      <!-- Grid System -->
+      <div class="component-container">
+        <h2>Grid System</h2>
+
+        <h3>Basic Grid</h3>
+        <div class="example-box">
+          <div class="row mb-3">
+            <div class="col-md-4 bg-primary text-white p-3">.col-md-4</div>
+            <div class="col-md-4 bg-secondary text-white p-3">.col-md-4</div>
+            <div class="col-md-4 bg-success text-white p-3">.col-md-4</div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 col-lg-3 bg-info text-white p-3">
+              .col-sm-6 .col-lg-3
+            </div>
+            <div class="col-sm-6 col-lg-9 bg-warning text-dark p-3">
+              .col-sm-6 .col-lg-9
+            </div>
+          </div>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;div class="row"&gt;
+    &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+    &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+    &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+    &lt;div class="col-sm-6 col-lg-3"&gt;.col-sm-6 .col-lg-3&lt;/div&gt;
+    &lt;div class="col-sm-6 col-lg-9"&gt;.col-sm-6 .col-lg-9&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <h3>Auto-layout Columns</h3>
+        <div class="example-box">
+          <div class="row">
+            <div class="col bg-danger text-white p-3">Auto column</div>
+            <div class="col bg-dark text-white p-3">Auto column</div>
+            <div class="col-6 bg-primary text-white p-3">Fixed width (6)</div>
+          </div>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;div class="row"&gt;
+    &lt;div class="col"&gt;Auto column&lt;/div&gt;
+    &lt;div class="col"&gt;Auto column&lt;/div&gt;
+    &lt;div class="col-6"&gt;Fixed width (6)&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+      <!-- Buttons -->
+      <div class="component-container">
+        <h2>Buttons</h2>
+
+        <h3>Basic Buttons</h3>
+        <div class="example-box">
+          <button class="btn btn-primary me-2">Primary</button>
+          <button class="btn btn-secondary me-2">Secondary</button>
+          <button class="btn btn-success me-2">Success</button>
+          <button class="btn btn-danger me-2">Danger</button>
+          <button class="btn btn-warning me-2">Warning</button>
+          <button class="btn btn-info me-2">Info</button>
+          <button class="btn btn-light me-2">Light</button>
+          <button class="btn btn-dark me-2">Dark</button>
+          <button class="btn btn-link me-2">Link</button>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="btn btn-success"&gt;Success&lt;/button&gt;
+&lt;button class="btn btn-danger"&gt;Danger&lt;/button&gt;
+&lt;button class="btn btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button class="btn btn-info"&gt;Info&lt;/button&gt;
+&lt;button class="btn btn-light"&gt;Light&lt;/button&gt;
+&lt;button class="btn btn-dark"&gt;Dark&lt;/button&gt;
+&lt;button class="btn btn-link"&gt;Link&lt;/button&gt;</code></pre>
+
+        <h3>Outline Buttons</h3>
+        <div class="example-box">
+          <button class="btn btn-outline-primary me-2">Primary</button>
+          <button class="btn btn-outline-secondary me-2">Secondary</button>
+          <button class="btn btn-outline-success me-2">Success</button>
+          <button class="btn btn-outline-danger me-2">Danger</button>
+          <button class="btn btn-outline-warning me-2">Warning</button>
+          <button class="btn btn-outline-info me-2">Info</button>
+          <button class="btn btn-outline-dark me-2">Dark</button>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;button class="btn btn-outline-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-outline-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="btn btn-outline-success"&gt;Success&lt;/button&gt;
+&lt;button class="btn btn-outline-danger"&gt;Danger&lt;/button&gt;
+&lt;button class="btn btn-outline-warning"&gt;Warning&lt;/button&gt;
+&lt;button class="btn btn-outline-info"&gt;Info&lt;/button&gt;
+&lt;button class="btn btn-outline-dark"&gt;Dark&lt;/button&gt;</code></pre>
+
+        <h3>Button Sizes</h3>
+        <div class="example-box">
+          <button class="btn btn-primary btn-lg me-2">Large</button>
+          <button class="btn btn-primary me-2">Default</button>
+          <button class="btn btn-primary btn-sm me-2">Small</button>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;button class="btn btn-primary btn-lg"&gt;Large&lt;/button&gt;
+&lt;button class="btn btn-primary"&gt;Default&lt;/button&gt;
+&lt;button class="btn btn-primary btn-sm"&gt;Small&lt;/button&gt;</code></pre>
+
+        <h3>Button Groups</h3>
+        <div class="example-box">
+          <div class="btn-group mb-3">
+            <button class="btn btn-primary">Left</button>
+            <button class="btn btn-primary">Middle</button>
+            <button class="btn btn-primary">Right</button>
+          </div>
+          <div class="btn-group-vertical">
+            <button class="btn btn-secondary">Top</button>
+            <button class="btn btn-secondary">Middle</button>
+            <button class="btn btn-secondary">Bottom</button>
+          </div>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;div class="btn-group"&gt;
+    &lt;button class="btn btn-primary"&gt;Left&lt;/button&gt;
+    &lt;button class="btn btn-primary"&gt;Middle&lt;/button&gt;
+    &lt;button class="btn btn-primary"&gt;Right&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="btn-group-vertical"&gt;
+    &lt;button class="btn btn-secondary"&gt;Top&lt;/button&gt;
+    &lt;button class="btn btn-secondary"&gt;Middle&lt;/button&gt;
+    &lt;button class="btn btn-secondary"&gt;Bottom&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+      <!-- Typography -->
+      <div class="component-container">
+        <h2>Typography</h2>
+
+        <h3>Headings</h3>
+        <div class="example-box">
+          <h1>h1. Bootstrap heading</h1>
+          <h2>h2. Bootstrap heading</h2>
+          <h3>h3. Bootstrap heading</h3>
+          <h4>h4. Bootstrap heading</h4>
+          <h5>h5. Bootstrap heading</h5>
+          <h6>h6. Bootstrap heading</h6>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;h1&gt;h1. Bootstrap heading&lt;/h1&gt;
+&lt;h2&gt;h2. Bootstrap heading&lt;/h2&gt;
+&lt;h3&gt;h3. Bootstrap heading&lt;/h3&gt;
+&lt;h4&gt;h4. Bootstrap heading&lt;/h4&gt;
+&lt;h5&gt;h5. Bootstrap heading&lt;/h5&gt;
+&lt;h6&gt;h6. Bootstrap heading&lt;/h6&gt;</code></pre>
+
+        <h3>Display Headings</h3>
+        <div class="example-box">
+          <h1 class="display-1">Display 1</h1>
+          <h1 class="display-2">Display 2</h1>
+          <h1 class="display-3">Display 3</h1>
+          <h1 class="display-4">Display 4</h1>
+          <h1 class="display-5">Display 5</h1>
+          <h1 class="display-6">Display 6</h1>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;h1 class="display-1"&gt;Display 1&lt;/h1&gt;
+&lt;h1 class="display-2"&gt;Display 2&lt;/h1&gt;
+&lt;h1 class="display-3"&gt;Display 3&lt;/h1&gt;
+&lt;h1 class="display-4"&gt;Display 4&lt;/h1&gt;
+&lt;h1 class="display-5"&gt;Display 5&lt;/h1&gt;
+&lt;h1 class="display-6"&gt;Display 6&lt;/h1&gt;</code></pre>
+
+        <h3>Text Utilities</h3>
+        <div class="example-box">
+          <p class="text-primary">.text-primary</p>
+          <p class="text-secondary">.text-secondary</p>
+          <p class="text-success">.text-success</p>
+          <p class="text-danger">.text-danger</p>
+          <p class="text-warning bg-dark">.text-warning</p>
+          <p class="text-info bg-dark">.text-info</p>
+          <p class="text-light bg-dark">.text-light</p>
+          <p class="text-dark">.text-dark</p>
+          <p class="text-muted">.text-muted</p>
+          <p class="text-start">Start aligned text</p>
+          <p class="text-center">Center aligned text</p>
+          <p class="text-end">End aligned text</p>
+          <p class="fw-bold">Bold text</p>
+          <p class="fw-bolder">Bolder weight text</p>
+          <p class="fw-normal">Normal weight text</p>
+          <p class="fw-light">Light weight text</p>
+          <p class="fst-italic">Italic text</p>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;p class="text-primary"&gt;.text-primary&lt;/p&gt;
+&lt;p class="text-secondary"&gt;.text-secondary&lt;/p&gt;
+&lt;p class="text-success"&gt;.text-success&lt;/p&gt;
+&lt;p class="text-danger"&gt;.text-danger&lt;/p&gt;
+&lt;p class="text-warning bg-dark"&gt;.text-warning&lt;/p&gt;
+&lt;p class="text-info bg-dark"&gt;.text-info&lt;/p&gt;
+&lt;p class="text-light bg-dark"&gt;.text-light&lt;/p&gt;
+&lt;p class="text-dark"&gt;.text-dark&lt;/p&gt;
+&lt;p class="text-muted"&gt;.text-muted&lt;/p&gt;
+&lt;p class="text-start"&gt;Start aligned text&lt;/p&gt;
+&lt;p class="text-center"&gt;Center aligned text&lt;/p&gt;
+&lt;p class="text-end"&gt;End aligned text&lt;/p&gt;
+&lt;p class="fw-bold"&gt;Bold text&lt;/p&gt;
+&lt;p class="fw-bolder"&gt;Bolder weight text&lt;/p&gt;
+&lt;p class="fw-normal"&gt;Normal weight text&lt;/p&gt;
+&lt;p class="fw-light"&gt;Light weight text&lt;/p&gt;
+&lt;p class="fst-italic"&gt;Italic text&lt;/p&gt;</code></pre>
+      </div>
+
+      <!-- Alerts -->
+      <div class="component-container">
+        <h2>Alerts</h2>
+
+        <div class="example-box">
+          <div class="alert alert-primary" role="alert">
+            A simple primary alert
+          </div>
+          <div class="alert alert-secondary" role="alert">
+            A simple secondary alert
+          </div>
+          <div class="alert alert-success" role="alert">
+            A simple success alert
+          </div>
+          <div class="alert alert-danger" role="alert">
+            A simple danger alert
+          </div>
+          <div class="alert alert-warning" role="alert">
+            A simple warning alert
+          </div>
+          <div class="alert alert-info" role="alert">A simple info alert</div>
+          <div class="alert alert-light" role="alert">A simple light alert</div>
+          <div class="alert alert-dark" role="alert">A simple dark alert</div>
+
+          <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Well done!</h4>
+            <p>
+              Aww yeah, you successfully read this important alert message. This
+              example text is going to run a bit longer so that you can see how
+              spacing within an alert works with this kind of content.
+            </p>
+            <hr />
+            <p class="mb-0">
+              Whenever you need to, be sure to use margin utilities to keep
+              things nice and tidy.
+            </p>
+          </div>
+
+          <div
+            class="alert alert-warning alert-dismissible fade show"
+            role="alert"
+          >
+            <strong>Holy guacamole!</strong> You should check in on some of
+            those fields below.
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+            ></button>
+          </div>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;div class="alert alert-primary" role="alert"&gt;
+    A simple primary alert
+&lt;/div&gt;
+
+&lt;div class="alert alert-secondary" role="alert"&gt;
+    A simple secondary alert
+&lt;/div&gt;
+
+&lt;div class="alert alert-success" role="alert"&gt;
+    A simple success alert
+&lt;/div&gt;
+
+&lt;div class="alert alert-danger" role="alert"&gt;
+    A simple danger alert
+&lt;/div&gt;
+
+&lt;div class="alert alert-warning" role="alert"&gt;
+    A simple warning alert
+&lt;/div&gt;
+
+&lt;div class="alert alert-info" role="alert"&gt;
+    A simple info alert
+&lt;/div&gt;
+
+&lt;div class="alert alert-light" role="alert"&gt;
+    A simple light alert
+&lt;/div&gt;
+
+&lt;div class="alert alert-dark" role="alert"&gt;
+    A simple dark alert
+&lt;/div&gt;
+
+&lt;div class="alert alert-success" role="alert"&gt;
+    &lt;h4 class="alert-heading"&gt;Well done!&lt;/h4&gt;
+    &lt;p&gt;Aww yeah, you successfully read this important alert message.&lt;/p&gt;
+    &lt;hr&gt;
+    &lt;p class="mb-0"&gt;Whenever you need to, be sure to use margin utilities.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-warning alert-dismissible fade show" role="alert"&gt;
+    &lt;strong&gt;Holy guacamole!&lt;/strong&gt; You should check in on some of those fields below.
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+      <!-- Cards -->
+      <div class="component-container">
+        <h2>Cards</h2>
+
+        <h3>Basic Card</h3>
+        <div class="example-box">
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://via.placeholder.com/286x180"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;div class="card" style="width: 18rem;"&gt;
+    &lt;img src="https://via.placeholder.com/286x180" class="card-img-top" alt="..."&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+        &lt;p class="card-text"&gt;Some quick example text.&lt;/p&gt;
+        &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <h3>Card with Header and Footer</h3>
+        <div class="example-box">
+          <div class="card">
+            <div class="card-header">Featured</div>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">
+                With supporting text below as a natural lead-in to additional
+                content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            <div class="card-footer text-muted">2 days ago</div>
+          </div>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;div class="card"&gt;
+    &lt;div class="card-header"&gt;
+        Featured
+    &lt;/div&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Special title treatment&lt;/h5&gt;
+        &lt;p class="card-text"&gt;With supporting text below.&lt;/p&gt;
+        &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="card-footer text-muted"&gt;
+        2 days ago
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <h3>Card Groups</h3>
+        <div class="example-box">
+          <div class="card-group">
+            <div class="card">
+              <img
+                src="https://via.placeholder.com/286x180"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content.
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="https://via.placeholder.com/286x180"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  This card has supporting text below as a natural lead-in to
+                  additional content.
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="https://via.placeholder.com/286x180"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content.
+                </p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;div class="card-group"&gt;
+    &lt;div class="card"&gt;
+        &lt;img src="https://via.placeholder.com/286x180" class="card-img-top" alt="..."&gt;
+        &lt;div class="card-body"&gt;
+            &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            &lt;p class="card-text"&gt;This is a wider card.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="card-footer"&gt;
+            &lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="card"&gt;
+        &lt;img src="https://via.placeholder.com/286x180" class="card-img-top" alt="..."&gt;
+        &lt;div class="card-body"&gt;
+            &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            &lt;p class="card-text"&gt;This card has supporting text.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="card-footer"&gt;
+            &lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="card"&gt;
+        &lt;img src="https://via.placeholder.com/286x180" class="card-img-top" alt="..."&gt;
+        &lt;div class="card-body"&gt;
+            &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+            &lt;p class="card-text"&gt;This is a wider card.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="card-footer"&gt;
+            &lt;small class="text-muted"&gt;Last updated 3 mins ago&lt;/small&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+      <!-- Navbar -->
+      <div class="component-container">
+        <h2>Navbar</h2>
+
+        <div class="example-box">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                    >
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </li>
+                      <li><hr class="dropdown-divider" /></li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Search"
+                  />
+                  <button class="btn btn-outline-success" type="submit">
+                    Search
+                  </button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+          <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand">Dark navbar</a>
+              <form class="d-flex">
+                <button class="btn btn-outline-light" type="button">
+                  Button
+                </button>
+              </form>
+            </div>
+          </nav>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;
+    &lt;div class="container-fluid"&gt;
+        &lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt;
+        &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"&gt;
+            &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+            &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link active" href="#"&gt;Home&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="nav-item dropdown"&gt;
+                    &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"&gt;
+                        Dropdown
+                    &lt;/a&gt;
+                    &lt;ul class="dropdown-menu"&gt;
+                        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;hr class="dropdown-divider"&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link disabled"&gt;Disabled&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;form class="d-flex"&gt;
+                &lt;input class="form-control me-2" type="search" placeholder="Search"&gt;
+                &lt;button class="btn btn-outline-success" type="submit"&gt;Search&lt;/button&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;nav class="navbar navbar-dark bg-dark"&gt;
+    &lt;div class="container-fluid"&gt;
+        &lt;a class="navbar-brand"&gt;Dark navbar&lt;/a&gt;
+        &lt;form class="d-flex"&gt;
+            &lt;button class="btn btn-outline-light" type="button"&gt;Button&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+      </div>
+
+      <!-- Forms -->
+      <div class="component-container">
+        <h2>Forms</h2>
+
+        <h3>Basic Form</h3>
+        <div class="example-box">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label"
+                >Email address</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+              <div id="emailHelp" class="form-text">
+                We'll never share your email with anyone else.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label"
+                >Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+              />
+            </div>
+            <div class="mb-3 form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="exampleCheck1"
+              />
+              <label class="form-check-label" for="exampleCheck1"
+                >Check me out</label
+              >
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;form&gt;
+    &lt;div class="mb-3"&gt;
+        &lt;label for="exampleInputEmail1" class="form-label"&gt;Email address&lt;/label&gt;
+        &lt;input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"&gt;
+        &lt;div id="emailHelp" class="form-text"&gt;We'll never share your email.&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="mb-3"&gt;
+        &lt;label for="exampleInputPassword1" class="form-label"&gt;Password&lt;/label&gt;
+        &lt;input type="password" class="form-control" id="exampleInputPassword1"&gt;
+    &lt;/div&gt;
+    &lt;div class="mb-3 form-check"&gt;
+        &lt;input type="checkbox" class="form-check-input" id="exampleCheck1"&gt;
+        &lt;label class="form-check-label" for="exampleCheck1"&gt;Check me out&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+        <h3>Form Controls</h3>
+        <div class="example-box">
+          <div class="mb-3">
+            <label for="formFile" class="form-label"
+              >Default file input example</label
+            >
+            <input class="form-control" type="file" id="formFile" />
+          </div>
+          <div class="mb-3">
+            <label for="formFileMultiple" class="form-label"
+              >Multiple files input example</label
+            >
+            <input
+              class="form-control"
+              type="file"
+              id="formFileMultiple"
+              multiple
+            />
+          </div>
+          <div class="mb-3">
+            <label for="formFileDisabled" class="form-label"
+              >Disabled file input example</label
+            >
+            <input
+              class="form-control"
+              type="file"
+              id="formFileDisabled"
+              disabled
+            />
+          </div>
+          <div class="mb-3">
+            <label for="formFileSm" class="form-label"
+              >Small file input example</label
+            >
+            <input
+              class="form-control form-control-sm"
+              id="formFileSm"
+              type="file"
+            />
+          </div>
+          <div>
+            <label for="formFileLg" class="form-label"
+              >Large file input example</label
+            >
+            <input
+              class="form-control form-control-lg"
+              id="formFileLg"
+              type="file"
+            />
+          </div>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;div class="mb-3"&gt;
+    &lt;label for="formFile" class="form-label"&gt;Default file input example&lt;/label&gt;
+    &lt;input class="form-control" type="file" id="formFile"&gt;
+&lt;/div&gt;
+&lt;div class="mb-3"&gt;
+    &lt;label for="formFileMultiple" class="form-label"&gt;Multiple files input example&lt;/label&gt;
+    &lt;input class="form-control" type="file" id="formFileMultiple" multiple&gt;
+&lt;/div&gt;
+&lt;div class="mb-3"&gt;
+    &lt;label for="formFileDisabled" class="form-label"&gt;Disabled file input example&lt;/label&gt;
+    &lt;input class="form-control" type="file" id="formFileDisabled" disabled&gt;
+&lt;/div&gt;
+&lt;div class="mb-3"&gt;
+    &lt;label for="formFileSm" class="form-label"&gt;Small file input example&lt;/label&gt;
+    &lt;input class="form-control form-control-sm" id="formFileSm" type="file"&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;label for="formFileLg" class="form-label"&gt;Large file input example&lt;/label&gt;
+    &lt;input class="form-control form-control-lg" id="formFileLg" type="file"&gt;
+&lt;/div&gt;</code></pre>
+
+        <h3>Select</h3>
+        <div class="example-box">
+          <select class="form-select mb-3" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+
+          <select class="form-select form-select-lg mb-3">
+            <option selected>Large select</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+
+          <select class="form-select form-select-sm">
+            <option selected>Small select</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;select class="form-select mb-3" aria-label="Default select example"&gt;
+    &lt;option selected&gt;Open this select menu&lt;/option&gt;
+    &lt;option value="1"&gt;One&lt;/option&gt;
+    &lt;option value="2"&gt;Two&lt;/option&gt;
+    &lt;option value="3"&gt;Three&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;select class="form-select form-select-lg mb-3"&gt;
+    &lt;option selected&gt;Large select&lt;/option&gt;
+    &lt;option value="1"&gt;One&lt;/option&gt;
+    &lt;option value="2"&gt;Two&lt;/option&gt;
+    &lt;option value="3"&gt;Three&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;select class="form-select form-select-sm"&gt;
+    &lt;option selected&gt;Small select&lt;/option&gt;
+    &lt;option value="1"&gt;One&lt;/option&gt;
+    &lt;option value="2"&gt;Two&lt;/option&gt;
+    &lt;option value="3"&gt;Three&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+
+        <h3>Checkboxes and Radios</h3>
+        <div class="example-box">
+          <div class="form-check mb-3">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="flexCheckDefault"
+            />
+            <label class="form-check-label" for="flexCheckDefault">
+              Default checkbox
+            </label>
+          </div>
+          <div class="form-check mb-3">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="flexCheckChecked"
+              checked
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+              Checked checkbox
+            </label>
+          </div>
+          <div class="form-check mb-3">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">
+              Default radio
+            </label>
+          </div>
+          <div class="form-check mb-3">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault2"
+              checked
+            />
+            <label class="form-check-label" for="flexRadioDefault2">
+              Default checked radio
+            </label>
+          </div>
+          <div class="form-check form-switch mb-3">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="flexSwitchCheckDefault"
+            />
+            <label class="form-check-label" for="flexSwitchCheckDefault"
+              >Default switch checkbox input</label
+            >
+          </div>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;div class="form-check mb-3"&gt;
+    &lt;input class="form-check-input" type="checkbox" id="flexCheckDefault"&gt;
+    &lt;label class="form-check-label" for="flexCheckDefault"&gt;
+        Default checkbox
+    &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-check mb-3"&gt;
+    &lt;input class="form-check-input" type="checkbox" id="flexCheckChecked" checked&gt;
+    &lt;label class="form-check-label" for="flexCheckChecked"&gt;
+        Checked checkbox
+    &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-check mb-3"&gt;
+    &lt;input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"&gt;
+    &lt;label class="form-check-label" for="flexRadioDefault1"&gt;
+        Default radio
+    &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-check mb-3"&gt;
+    &lt;input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked&gt;
+    &lt;label class="form-check-label" for="flexRadioDefault2"&gt;
+        Default checked radio
+    &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-check form-switch mb-3"&gt;
+    &lt;input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"&gt;
+    &lt;label class="form-check-label" for="flexSwitchCheckDefault"&gt;Default switch checkbox input&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+      <!-- Tables -->
+      <div class="component-container">
+        <h2>Tables</h2>
+
+        <h3>Basic Table</h3>
+        <div class="example-box">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;table class="table"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope="col"&gt;#&lt;/th&gt;
+            &lt;th scope="col"&gt;First&lt;/th&gt;
+            &lt;th scope="col"&gt;Last&lt;/th&gt;
+            &lt;th scope="col"&gt;Handle&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;1&lt;/th&gt;
+            &lt;td&gt;Mark&lt;/td&gt;
+            &lt;td&gt;Otto&lt;/td&gt;
+            &lt;td&gt;@mdo&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;2&lt;/th&gt;
+            &lt;td&gt;Jacob&lt;/td&gt;
+            &lt;td&gt;Thornton&lt;/td&gt;
+            &lt;td&gt;@fat&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;3&lt;/th&gt;
+            &lt;td colspan="2"&gt;Larry the Bird&lt;/td&gt;
+            &lt;td&gt;@twitter&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+        <h3>Table Variants</h3>
+        <div class="example-box">
+          <table class="table table-dark table-striped table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;table class="table table-dark table-striped table-hover"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope="col"&gt;#&lt;/th&gt;
+            &lt;th scope="col"&gt;First&lt;/th&gt;
+            &lt;th scope="col"&gt;Last&lt;/th&gt;
+            &lt;th scope="col"&gt;Handle&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;1&lt;/th&gt;
+            &lt;td&gt;Mark&lt;/td&gt;
+            &lt;td&gt;Otto&lt;/td&gt;
+            &lt;td&gt;@mdo&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;2&lt;/th&gt;
+            &lt;td&gt;Jacob&lt;/td&gt;
+            &lt;td&gt;Thornton&lt;/td&gt;
+            &lt;td&gt;@fat&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;3&lt;/th&gt;
+            &lt;td colspan="2"&gt;Larry the Bird&lt;/td&gt;
+            &lt;td&gt;@twitter&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+        <h3>Bordered Table</h3>
+        <div class="example-box">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;table class="table table-bordered"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope="col"&gt;#&lt;/th&gt;
+            &lt;th scope="col"&gt;First&lt;/th&gt;
+            &lt;th scope="col"&gt;Last&lt;/th&gt;
+            &lt;th scope="col"&gt;Handle&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;1&lt;/th&gt;
+            &lt;td&gt;Mark&lt;/td&gt;
+            &lt;td&gt;Otto&lt;/td&gt;
+            &lt;td&gt;@mdo&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;2&lt;/th&gt;
+            &lt;td&gt;Jacob&lt;/td&gt;
+            &lt;td&gt;Thornton&lt;/td&gt;
+            &lt;td&gt;@fat&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;3&lt;/th&gt;
+            &lt;td colspan="2"&gt;Larry the Bird&lt;/td&gt;
+            &lt;td&gt;@twitter&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+      </div>
+
+      <!-- Modals -->
+      <div class="component-container">
+        <h2>Modals</h2>
+
+        <div class="example-box">
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Launch demo modal
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    Modal title
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    Save changes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;!-- Button trigger modal --&gt;
+&lt;button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"&gt;
+    Launch demo modal
+&lt;/button&gt;
+
+&lt;!-- Modal --&gt;
+&lt;div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+    &lt;div class="modal-dialog"&gt;
+        &lt;div class="modal-content"&gt;
+            &lt;div class="modal-header"&gt;
+                &lt;h5 class="modal-title" id="exampleModalLabel"&gt;Modal title&lt;/h5&gt;
+                &lt;button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class="modal-body"&gt;
+                &lt;p&gt;Modal body text goes here.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="modal-footer"&gt;
+                &lt;button type="button" class="btn btn-secondary" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+                &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+      <!-- Tooltips & Popovers -->
+      <div class="component-container">
+        <h2>Tooltips & Popovers</h2>
+
+        <div class="example-box">
+          <button
+            type="button"
+            class="btn btn-secondary me-2"
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            title="Tooltip on top"
+          >
+            Tooltip on top
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary me-2"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            title="Tooltip on right"
+          >
+            Tooltip on right
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary me-2"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            title="Tooltip on bottom"
+          >
+            Tooltip on bottom
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-toggle="tooltip"
+            data-bs-placement="left"
+            title="Tooltip on left"
+          >
+            Tooltip on left
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-lg btn-danger mt-3"
+            data-bs-toggle="popover"
+            title="Popover title"
+            data-bs-content="And here's some amazing content. It's very engaging. Right?"
+          >
+            Click to toggle popover
+          </button>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"&gt;
+    Tooltip on top
+&lt;/button&gt;
+&lt;button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right"&gt;
+    Tooltip on right
+&lt;/button&gt;
+&lt;button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom"&gt;
+    Tooltip on bottom
+&lt;/button&gt;
+&lt;button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left"&gt;
+    Tooltip on left
+&lt;/button&gt;
+
+&lt;button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content."&gt;
+    Click to toggle popover
+&lt;/button&gt;
+
+&lt;script&gt;
+    // Enable tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+    
+    // Enable popovers
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
+&lt;/script&gt;</code></pre>
+      </div>
+
+      <!-- Spinners -->
+      <div class="component-container">
+        <h2>Spinners</h2>
+
+        <div class="example-box">
+          <div class="spinner-border text-primary mb-3" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-border text-secondary mb-3" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-border text-success mb-3" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-border text-danger mb-3" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-border text-warning mb-3" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-border text-info mb-3" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-border text-light mb-3" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-border text-dark mb-3" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+
+          <div class="spinner-grow text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-secondary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-success" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-danger" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-warning" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-info" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-light" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-dark" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;div class="spinner-border text-primary" role="status"&gt;
+    &lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="spinner-border text-secondary" role="status"&gt;
+    &lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="spinner-border text-success" role="status"&gt;
+    &lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="spinner-border text-danger" role="status"&gt;
+    &lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="spinner-border text-warning" role="status"&gt;
+    &lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="spinner-border text-info" role="status"&gt;
+    &lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="spinner-border text-light" role="status"&gt;
+    &lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="spinner-border text-dark" role="status"&gt;
+    &lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="spinner-grow text-primary" role="status"&gt;
+    &lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="spinner-grow text-secondary" role="status"&gt;
+    &lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="spinner-grow text-success" role="status"&gt;
+    &lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="spinner-grow text-danger" role="status"&gt;
+    &lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="spinner-grow text-warning" role="status"&gt;
+    &lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="spinner-grow text-info" role="status"&gt;
+    &lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="spinner-grow text-light" role="status"&gt;
+    &lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="spinner-grow text-dark" role="status"&gt;
+    &lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+      <!-- Toasts -->
+      <div class="component-container">
+        <h2>Toasts</h2>
+
+        <div class="example-box">
+          <button type="button" class="btn btn-primary" id="liveToastBtn">
+            Show live toast
+          </button>
+
+          <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+            <div
+              id="liveToast"
+              class="toast"
+              role="alert"
+              aria-live="assertive"
+              aria-atomic="true"
+            >
+              <div class="toast-header">
+                <strong class="me-auto">Bootstrap</strong>
+                <small>11 mins ago</small>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="toast"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="toast-body">
+                Hello, world! This is a toast message.
+              </div>
+            </div>
+          </div>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;button type="button" class="btn btn-primary" id="liveToastBtn"&gt;Show live toast&lt;/button&gt;
+
+&lt;div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11"&gt;
+    &lt;div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+        &lt;div class="toast-header"&gt;
+            &lt;strong class="me-auto"&gt;Bootstrap&lt;/strong&gt;
+            &lt;small&gt;11 mins ago&lt;/small&gt;
+            &lt;button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class="toast-body"&gt;
+            Hello, world! This is a toast message.
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    document.getElementById('liveToastBtn').addEventListener('click', function() {
+        var toast = new bootstrap.Toast(document.getElementById('liveToast'))
+        toast.show()
+    })
+&lt;/script&gt;</code></pre>
+      </div>
+
+      <!-- Badges -->
+      <div class="component-container">
+        <h2>Badges</h2>
+
+        <div class="example-box">
+          <h1>Example heading <span class="badge bg-secondary">New</span></h1>
+          <h2>Example heading <span class="badge bg-secondary">New</span></h2>
+          <h3>Example heading <span class="badge bg-secondary">New</span></h3>
+          <h4>Example heading <span class="badge bg-secondary">New</span></h4>
+          <h5>Example heading <span class="badge bg-secondary">New</span></h5>
+          <h6>Example heading <span class="badge bg-secondary">New</span></h6>
+
+          <button type="button" class="btn btn-primary me-2">
+            Notifications <span class="badge bg-secondary">4</span>
+          </button>
+
+          <span class="badge rounded-pill bg-primary me-2">Primary</span>
+          <span class="badge rounded-pill bg-secondary me-2">Secondary</span>
+          <span class="badge rounded-pill bg-success me-2">Success</span>
+          <span class="badge rounded-pill bg-danger me-2">Danger</span>
+          <span class="badge rounded-pill bg-warning text-dark me-2"
+            >Warning</span
+          >
+          <span class="badge rounded-pill bg-info text-dark me-2">Info</span>
+          <span class="badge rounded-pill bg-light text-dark me-2">Light</span>
+          <span class="badge rounded-pill bg-dark">Dark</span>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;h1&gt;Example heading &lt;span class="badge bg-secondary"&gt;New&lt;/span&gt;&lt;/h1&gt;
+&lt;h2&gt;Example heading &lt;span class="badge bg-secondary"&gt;New&lt;/span&gt;&lt;/h2&gt;
+&lt;h3&gt;Example heading &lt;span class="badge bg-secondary"&gt;New&lt;/span&gt;&lt;/h3&gt;
+&lt;h4&gt;Example heading &lt;span class="badge bg-secondary"&gt;New&lt;/span&gt;&lt;/h4&gt;
+&lt;h5&gt;Example heading &lt;span class="badge bg-secondary"&gt;New&lt;/span&gt;&lt;/h5&gt;
+&lt;h6&gt;Example heading &lt;span class="badge bg-secondary"&gt;New&lt;/span&gt;&lt;/h6&gt;
+
+&lt;button type="button" class="btn btn-primary"&gt;
+    Notifications &lt;span class="badge bg-secondary"&gt;4&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;span class="badge rounded-pill bg-primary"&gt;Primary&lt;/span&gt;
+&lt;span class="badge rounded-pill bg-secondary"&gt;Secondary&lt;/span&gt;
+&lt;span class="badge rounded-pill bg-success"&gt;Success&lt;/span&gt;
+&lt;span class="badge rounded-pill bg-danger"&gt;Danger&lt;/span&gt;
+&lt;span class="badge rounded-pill bg-warning text-dark"&gt;Warning&lt;/span&gt;
+&lt;span class="badge rounded-pill bg-info text-dark"&gt;Info&lt;/span&gt;
+&lt;span class="badge rounded-pill bg-light text-dark"&gt;Light&lt;/span&gt;
+&lt;span class="badge rounded-pill bg-dark"&gt;Dark&lt;/span&gt;</code></pre>
+      </div>
+
+      <!-- Progress Bars -->
+      <div class="component-container">
+        <h2>Progress Bars</h2>
+
+        <div class="example-box">
+          <div class="progress mb-3">
+            <div
+              class="progress-bar"
+              role="progressbar"
+              style="width: 25%"
+              aria-valuenow="25"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+          <div class="progress mb-3">
+            <div
+              class="progress-bar bg-success"
+              role="progressbar"
+              style="width: 40%"
+              aria-valuenow="40"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+          <div class="progress mb-3">
+            <div
+              class="progress-bar bg-info"
+              role="progressbar"
+              style="width: 50%"
+              aria-valuenow="50"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+          <div class="progress mb-3">
+            <div
+              class="progress-bar bg-warning"
+              role="progressbar"
+              style="width: 75%"
+              aria-valuenow="75"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+          <div class="progress mb-3">
+            <div
+              class="progress-bar bg-danger"
+              role="progressbar"
+              style="width: 100%"
+              aria-valuenow="100"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+          <div class="progress mb-3">
+            <div
+              class="progress-bar"
+              role="progressbar"
+              style="width: 15%"
+              aria-valuenow="15"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+            <div
+              class="progress-bar bg-success"
+              role="progressbar"
+              style="width: 30%"
+              aria-valuenow="30"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+            <div
+              class="progress-bar bg-info"
+              role="progressbar"
+              style="width: 20%"
+              aria-valuenow="20"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+          <div class="progress" style="height: 20px">
+            <div
+              class="progress-bar"
+              role="progressbar"
+              style="width: 25%"
+              aria-valuenow="25"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;div class="progress mb-3"&gt;
+    &lt;div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress mb-3"&gt;
+    &lt;div class="progress-bar bg-success" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress mb-3"&gt;
+    &lt;div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress mb-3"&gt;
+    &lt;div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress mb-3"&gt;
+    &lt;div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress mb-3"&gt;
+    &lt;div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+    &lt;div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+    &lt;div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress" style="height: 20px;"&gt;
+    &lt;div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+      <!-- List Groups -->
+      <div class="component-container">
+        <h2>List Groups</h2>
+
+        <div class="example-box">
+          <ul class="list-group mb-3">
+            <li class="list-group-item">A simple default list group item</li>
+            <li class="list-group-item list-group-item-primary">
+              A simple primary list group item
+            </li>
+            <li class="list-group-item list-group-item-secondary">
+              A simple secondary list group item
+            </li>
+            <li class="list-group-item list-group-item-success">
+              A simple success list group item
+            </li>
+            <li class="list-group-item list-group-item-danger">
+              A simple danger list group item
+            </li>
+            <li class="list-group-item list-group-item-warning">
+              A simple warning list group item
+            </li>
+            <li class="list-group-item list-group-item-info">
+              A simple info list group item
+            </li>
+            <li class="list-group-item list-group-item-light">
+              A simple light list group item
+            </li>
+            <li class="list-group-item list-group-item-dark">
+              A simple dark list group item
+            </li>
+          </ul>
+
+          <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">List group item heading</h5>
+                <small>3 days ago</small>
+              </div>
+              <p class="mb-1">Some placeholder content in a paragraph.</p>
+              <small>And some small print.</small>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">List group item heading</h5>
+                <small class="text-muted">3 days ago</small>
+              </div>
+              <p class="mb-1">Some placeholder content in a paragraph.</p>
+              <small class="text-muted">And some muted small print.</small>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">List group item heading</h5>
+                <small class="text-muted">3 days ago</small>
+              </div>
+              <p class="mb-1">Some placeholder content in a paragraph.</p>
+              <small class="text-muted">And some muted small print.</small>
+            </a>
+          </div>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;ul class="list-group"&gt;
+    &lt;li class="list-group-item"&gt;A simple default list group item&lt;/li&gt;
+    &lt;li class="list-group-item list-group-item-primary"&gt;A simple primary list group item&lt;/li&gt;
+    &lt;li class="list-group-item list-group-item-secondary"&gt;A simple secondary list group item&lt;/li&gt;
+    &lt;li class="list-group-item list-group-item-success"&gt;A simple success list group item&lt;/li&gt;
+    &lt;li class="list-group-item list-group-item-danger"&gt;A simple danger list group item&lt;/li&gt;
+    &lt;li class="list-group-item list-group-item-warning"&gt;A simple warning list group item&lt;/li&gt;
+    &lt;li class="list-group-item list-group-item-info"&gt;A simple info list group item&lt;/li&gt;
+    &lt;li class="list-group-item list-group-item-light"&gt;A simple light list group item&lt;/li&gt;
+    &lt;li class="list-group-item list-group-item-dark"&gt;A simple dark list group item&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="list-group"&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action active"&gt;
+        &lt;div class="d-flex w-100 justify-content-between"&gt;
+            &lt;h5 class="mb-1"&gt;List group item heading&lt;/h5&gt;
+            &lt;small&gt;3 days ago&lt;/small&gt;
+        &lt;/div&gt;
+        &lt;p class="mb-1"&gt;Some placeholder content in a paragraph.&lt;/p&gt;
+        &lt;small&gt;And some small print.&lt;/small&gt;
+    &lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action"&gt;
+        &lt;div class="d-flex w-100 justify-content-between"&gt;
+            &lt;h5 class="mb-1"&gt;List group item heading&lt;/h5&gt;
+            &lt;small class="text-muted"&gt;3 days ago&lt;/small&gt;
+        &lt;/div&gt;
+        &lt;p class="mb-1"&gt;Some placeholder content in a paragraph.&lt;/p&gt;
+        &lt;small class="text-muted"&gt;And some muted small print.&lt;/small&gt;
+    &lt;/a&gt;
+    &lt;a href="#" class="list-group-item list-group-item-action"&gt;
+        &lt;div class="d-flex w-100 justify-content-between"&gt;
+            &lt;h5 class="mb-1"&gt;List group item heading&lt;/h5&gt;
+            &lt;small class="text-muted"&gt;3 days ago&lt;/small&gt;
+        &lt;/div&gt;
+        &lt;p class="mb-1"&gt;Some placeholder content in a paragraph.&lt;/p&gt;
+        &lt;small class="text-muted"&gt;And some muted small print.&lt;/small&gt;
+    &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+      <!-- Breadcrumb -->
+      <div class="component-container">
+        <h2>Breadcrumb</h2>
+
+        <div class="example-box">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Library</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Data</li>
+            </ol>
+          </nav>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;nav aria-label="breadcrumb"&gt;
+    &lt;ol class="breadcrumb"&gt;
+        &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;Library&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="breadcrumb-item active" aria-current="page"&gt;Data&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+      </div>
+
+      <!-- Pagination -->
+      <div class="component-container">
+        <h2>Pagination</h2>
+
+        <div class="example-box">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#">Previous</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+
+          <nav aria-label="...">
+            <ul class="pagination">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true"
+                  >Previous</a
+                >
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item active" aria-current="page">
+                <a class="page-link" href="#">2</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;nav aria-label="Page navigation example"&gt;
+    &lt;ul class="pagination"&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;Previous&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;Next&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;nav aria-label="..."&gt;
+    &lt;ul class="pagination"&gt;
+        &lt;li class="page-item disabled"&gt;
+            &lt;a class="page-link" href="#" tabindex="-1" aria-disabled="true"&gt;Previous&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item active" aria-current="page"&gt;
+            &lt;a class="page-link" href="#"&gt;2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="page-item"&gt;
+            &lt;a class="page-link" href="#"&gt;Next&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+      </div>
+
+      <!-- Spacing Utilities -->
+      <div class="component-container">
+        <h2>Spacing Utilities</h2>
+
+        <div class="example-box">
+          <div class="p-1 bg-light border">Padding 1 (4px)</div>
+          <div class="p-2 bg-light border">Padding 2 (8px)</div>
+          <div class="p-3 bg-light border">Padding 3 (16px)</div>
+          <div class="p-4 bg-light border">Padding 4 (24px)</div>
+          <div class="p-5 bg-light border">Padding 5 (48px)</div>
+
+          <div class="my-3"></div>
+
+          <div class="m-1 p-1 bg-light border">Margin 1 (4px)</div>
+          <div class="m-2 p-2 bg-light border">Margin 2 (8px)</div>
+          <div class="m-3 p-3 bg-light border">Margin 3 (16px)</div>
+          <div class="m-4 p-4 bg-light border">Margin 4 (24px)</div>
+          <div class="m-5 p-5 bg-light border">Margin 5 (48px)</div>
+
+          <div class="my-3"></div>
+
+          <div class="mx-auto p-2 bg-light border" style="width: 200px">
+            Centered element
+          </div>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;div class="p-1 bg-light border"&gt;Padding 1 (4px)&lt;/div&gt;
+&lt;div class="p-2 bg-light border"&gt;Padding 2 (8px)&lt;/div&gt;
+&lt;div class="p-3 bg-light border"&gt;Padding 3 (16px)&lt;/div&gt;
+&lt;div class="p-4 bg-light border"&gt;Padding 4 (24px)&lt;/div&gt;
+&lt;div class="p-5 bg-light border"&gt;Padding 5 (48px)&lt;/div&gt;
+
+&lt;div class="m-1 p-1 bg-light border"&gt;Margin 1 (4px)&lt;/div&gt;
+&lt;div class="m-2 p-2 bg-light border"&gt;Margin 2 (8px)&lt;/div&gt;
+&lt;div class="m-3 p-3 bg-light border"&gt;Margin 3 (16px)&lt;/div&gt;
+&lt;div class="m-4 p-4 bg-light border"&gt;Margin 4 (24px)&lt;/div&gt;
+&lt;div class="m-5 p-5 bg-light border"&gt;Margin 5 (48px)&lt;/div&gt;
+
+&lt;div class="mx-auto p-2 bg-light border" style="width: 200px;"&gt;
+    Centered element
+&lt;/div&gt;</code></pre>
+      </div>
+
+      <!-- Icons (Bootstrap Icons) -->
+      <div class="component-container">
+        <h2>Bootstrap Icons</h2>
+
+        <div class="example-box">
+          <i
+            class="bi bi-alarm"
+            style="font-size: 2rem; color: cornflowerblue"
+          ></i>
+          <i
+            class="bi bi-arrow-right-circle-fill"
+            style="font-size: 2rem; color: coral"
+          ></i>
+          <i class="bi bi-bell" style="font-size: 2rem; color: purple"></i>
+          <i class="bi bi-camera" style="font-size: 2rem; color: green"></i>
+          <i class="bi bi-chat-dots" style="font-size: 2rem; color: red"></i>
+          <i
+            class="bi bi-emoji-smile"
+            style="font-size: 2rem; color: orange"
+          ></i>
+          <i class="bi bi-heart" style="font-size: 2rem; color: pink"></i>
+          <i class="bi bi-star-fill" style="font-size: 2rem; color: gold"></i>
+
+          <button type="button" class="btn btn-primary">
+            <i class="bi bi-search"></i> Search
+          </button>
+
+          <button type="button" class="btn btn-success">
+            <i class="bi bi-check-circle"></i> Save
+          </button>
+        </div>
+        <pre><button class="btn btn-sm btn-outline-secondary copy-btn" onclick="copyCode(this)">Copy</button><code>&lt;i class="bi bi-alarm" style="font-size: 2rem; color: cornflowerblue;"&gt;&lt;/i&gt;
+&lt;i class="bi bi-arrow-right-circle-fill" style="font-size: 2rem; color: coral;"&gt;&lt;/i&gt;
+&lt;i class="bi bi-bell" style="font-size: 2rem; color: purple;"&gt;&lt;/i&gt;
+&lt;i class="bi bi-camera" style="font-size: 2rem; color: green;"&gt;&lt;/i&gt;
+&lt;i class="bi bi-chat-dots" style="font-size: 2rem; color: red;"&gt;&lt;/i&gt;
+&lt;i class="bi bi-emoji-smile" style="font-size: 2rem; color: orange;"&gt;&lt;/i&gt;
+&lt;i class="bi bi-heart" style="font-size: 2rem; color: pink;"&gt;&lt;/i&gt;
+&lt;i class="bi bi-star-fill" style="font-size: 2rem; color: gold;"&gt;&lt;/i&gt;
+
+&lt;button type="button" class="btn btn-primary"&gt;
+    &lt;i class="bi bi-search"&gt;&lt;/i&gt; Search
+&lt;/button&gt;
+
+&lt;button type="button" class="btn btn-success"&gt;
+    &lt;i class="bi bi-check-circle"&gt;&lt;/i&gt; Save
+&lt;/button&gt;</code></pre>
+      </div>
+    </div>
+
+    <script>
+      function copyCode(button) {
+        const code = button.nextElementSibling.textContent;
+        if (navigator.clipboard) {
+          navigator.clipboard
+            .writeText(code)
+            .then(() => {
+              button.textContent = "Copied!";
+              setTimeout(() => {
+                button.textContent = "Copy";
+              }, 1500);
+            })
+            .catch((err) => {
+              console.error("Failed to copy text: ", err);
+              fallbackCopyText(code, button);
+            });
+        } else {
+          fallbackCopyText(code, button);
+        }
+      }
+
+      function fallbackCopyText(text, button) {
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+          document.execCommand("copy");
+          button.textContent = "Copied!";
+          setTimeout(() => {
+            button.textContent = "Copy";
+          }, 1500);
+        } catch (err) {
+          console.error("Fallback copy failed: ", err);
+        }
+        document.body.removeChild(textarea);
+      }
+
+      // Enable tooltips
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+
+      // Enable popovers
+      var popoverTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="popover"]')
+      );
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl);
+      });
+
+      // Toast example with safety checks
+      var toastBtn = document.getElementById("liveToastBtn");
+      var toastElement = document.getElementById("liveToast");
+      if (toastBtn && toastElement) {
+        toastBtn.addEventListener("click", function () {
+          try {
+            var toast = new bootstrap.Toast(toastElement);
+            toast.show();
+          } catch (err) {
+            console.error("Toast initialization failed: ", err);
+          }
+        });
+      } else {
+        console.warn("Toast elements not found");
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
